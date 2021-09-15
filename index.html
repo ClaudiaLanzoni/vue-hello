@@ -17,10 +17,23 @@
 <body>
     
     <div id="root">
-        <h1>{{message}}</h1>
-        <img v-bind:src=imgURL>
-        
-        <div v-bind:style="{ backgroundImage: 'url(' + image + ')' }" class="img_wrap"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+
+                    <h1>{{message}}</h1>
+
+                    <button @click="changeCounter(); changeImage();" class="btn-primary my_br mb-3">GENERATORE DI {{name}}</button>
+                   
+                    <div><img v-bind:src=imgURL></div>
+                    
+                    <!--<div v-bind:style="{ backgroundImage: 'url(' + image + ')' }" class="img_wrap"></div>-->
+                    
+                    <h4>Il bottone generatore di {{name}} è stato cliccato {{ counter }} volte</h4>
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="javascript/myscript.js"></script>

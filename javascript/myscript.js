@@ -1,8 +1,24 @@
 let app = new Vue ({
     el : '#root',
     data : {
-        message: 'Hello!!!',
-        imgURL : 'https://it.wikipedia.org/wiki/Premio_Tenco#/media/File:Luigi_tenco.jpg',
-        image: 'https://www.gossipetv.com/wp-content/uploads/2017/04/beautiful-ronn-moss-oggi.jpg'
+        message: 'Buongiorno!',
+        name: 'NICK MASON',
+        counter: 0
+    },
+
+    methods: {
+        changeCounter(){
+            this.counter += 1
+        },
+
+        /*numeroRandom(min, max) { 
+            Math.floor(Math.random() * (max - min + 1)) + min;  
+        },*/
+
+        changeImage(){
+            if (this.counter === 1) {
+                this.imgURL = 'https://www.ondamusicale.it/wp-content/uploads/2018/01/mason_young.jpg'
+            }
+        }
     }
 })
